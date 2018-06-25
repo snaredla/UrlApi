@@ -16,16 +16,18 @@ class FrontController {
             render result as JSON
             return
         }
-       try{
+        try{
             def responseData = urlProcessService.processUrl(params.url,params.type)           
             if(responseData.status){
                 result.operationStatus = "success"              
                 result.responseData = responseData.resData
-            }else{           
+            }else{  
+                result.errdata=responseData
                 result.responseData = "Failed to get Info for URL: ${params.url}, try after some time"
             }
 			
-        }catch(Exception e){           
+        }catch(Exception e){        
+            result.errdata=responseData
             result.responseData = "Failed to get Info for URL: ${params.url}, try after some time"
         }
 		

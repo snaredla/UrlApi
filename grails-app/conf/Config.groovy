@@ -88,10 +88,12 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+         grails.serverURL =  "http://Urlapi-env.rk3ftvhxps.us-west-2.elasticbeanstalk.com"
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+      grails.serverURL =  "http://Urlshort-env.wj4tmu2c52.us-east-2.elasticbeanstalk.com"
     }
 }
 

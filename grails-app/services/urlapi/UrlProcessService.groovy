@@ -40,7 +40,7 @@ class UrlProcessService {
             data.resData=[shortUrl:entry.shortUrl,longUrl:entry.longUrl]                  
             data.status=true           
         }
-        return data
+              return data
     }
     
     /*
@@ -62,12 +62,12 @@ class UrlProcessService {
                     data.status=true    
                 }
                 response.failure = { resp, res -> 
-                    data.resData=res
+                     data.resData=res
                     data.status=false    
                 }
             }
         }
-        catch(e){           
+        catch(e){          
             data.resData=e.getMessage()
              data.status=false   
         }
